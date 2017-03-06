@@ -1,0 +1,289 @@
+/* General style */
+.button {
+  background-color: #fff;
+  border: 1px solid #ccc;  
+}
+.btn-default:hover {
+  background-color: #fff;
+}
+ul {
+  text-align: left;
+}
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+
+/* For Upload Component */
+#toolContainer {
+  text-align: center;
+}
+#modalWindow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 50;
+}
+#modalBox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -195px;
+  padding: 20px;
+  width: 400px;
+  height: 165px;
+  font-size: 16px;
+  background-color: #fff;
+  text-align: left;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+#modalBox .title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #574751;
+}
+#modalBox .body {
+  color: #999;
+  margin-top: 20px;
+}
+#modalBox .button-group {
+  float: right;
+  margin-top: 26px;
+}
+#modalBox .cancel-btn,
+#modalBox .delete-btn {
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #fff;
+  padding: 5px;
+}
+#modalBox .cancel-btn {
+  margin-right: 12px;
+  color: #999;
+}
+#modalBox .delete-btn {
+  color: #419bf9;
+}
+#modalBox .cancel-btn:hover,
+#modalBox .delete-btn:hover {
+  border-radius: 0;
+  box-shadow: 0 1px 5px 0 #ccc
+}
+#modalBox .cancel-btn:active {
+  color: #fff;
+  background-color: #999;
+}
+#modalBox .delete-btn:active {
+  color: #fff;
+  background-color: #419bf9;
+}
+#image-container {
+  position: relative;
+  width: 1190px;
+  height: 745px; 
+  margin: 0 auto; 
+  margin-top: 40px;
+}
+#uploadedImage {
+  border: 1px solid #999;
+}
+#uploadedImage.showCross {
+  cursor: crosshair;
+}
+#plusBtn,
+#eyesBtn,
+#saveBtn {
+  position: fixed;
+  bottom: 10px;
+}
+#plusBtn {
+  left: 10px;
+}
+#eyesBtn {
+  left: 60px;
+}
+#saveBtn {
+  left: 110px;
+}
+#saveBtn a {
+  color: #333;
+}
+
+/* For NotesDot Component */
+.notesDot {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 26px;
+  height: 26px;
+  color: #fff;
+  background-color: #fecf33;
+  padding: 3px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 1px 1px 0 rgba(87, 71, 81, 0.6);
+  cursor: default;
+  transform: scale3d(1, 1, 1);
+  will-change: transform;
+  transition: transform 350ms cubic-bezier(0.6, 2.7, 0.5, 0.2);  
+}
+.notesDot:hover {
+  transform: scale3d(1.2, 1.2, 1);
+}
+.notesDot:active {
+  opacity: 0.6;
+}
+.notesDot.block {
+  display: block;
+}
+.notesDot.none {
+  display: none;
+}
+
+/* For NotesItem Component */
+.notesForm {
+  color: #574751;
+  padding: 10px 0px;
+}
+.notesForm input {
+  width: 130px !important;
+  height: 30px;
+  margin: 0 5px;
+}
+.text-field {
+  color: #574751;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  background-color: rgba(254, 207, 51, 0.15);
+}
+.enter-btn,
+.enter-btn:hover,
+.enter-btn:active {
+  color: #fff !important;
+  background-color: #fecf33;
+  border: none;
+  letter-spacing: 0.5px;
+}
+.popoverInput {
+  display: none;
+  position: absolute;
+  width: 352px;
+  background: #fff;
+  box-shadow: 0 1px 5px 0 #999;
+  border-radius: 4px;
+  z-index: 0;
+}
+.popoverInput.displayBlock {
+  display: block;
+}
+.popoverAnchor {
+  position: absolute;
+  top: 15px;
+  display: block;  
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  z-index: 10;
+}
+.popoverAnchor.right {
+  right: -15px;
+  box-shadow: 2px 0 1px -1px #ccc, 1px -2px 2px -1px #ccc;
+}
+.popoverAnchor.left {
+  left: 0;
+  box-shadow: 0px 2px 2px -2px #ccc, -2px 2px 2px -1px #ccc;
+}
+.cancel-link {
+  display: none;
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 10px;   
+}
+.cancel-link span {
+  color: #fff;
+  font-size: 12px;
+  padding: 0 6px;
+  border-radius: 12px;
+  background-color: #bcb5b9;
+  cursor: pointer;   
+}
+.error-msg {
+  display: none;
+  text-align: left;
+  color: red;
+  font-size: 12px;
+  padding: 0px 0 5px 15px;
+}
+
+/* For ListNotes Component */
+.notes-field {
+  width: 270px;
+  text-align: left;
+  padding: 15px;
+}
+.notes-field .key {
+  color: #0dcfda;
+}
+.notes-field .value {
+  color: #f69833;
+}
+.notes-field .action-links {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  font-size: 12px;
+}
+.notes-field .link {
+  color: #fff;
+  font-size: 12px;
+  padding: 0 6px;
+  border-radius: 12px;
+  background-color: #bcb5b9;
+  cursor: pointer;
+}
+.notes-field .link.first {
+  margin-right: 3px;
+}
+
+/* For DeleteNote Component */
+.deleteNote {
+  display: none;
+  position: absolute;
+  color: #ee6723;
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+  text-align: left;
+  padding: 13px;
+  padding-left: 25px;
+  background: #fff;
+  box-shadow: 1px 1px 5px #999;
+  cursor: pointer;
+  z-index: 0;
+}
+.deleteNote:hover {
+  background-color: #FDEFE9;
+}
